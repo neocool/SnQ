@@ -15,7 +15,7 @@ To Do List:
 13. About section.
 14. socket io.
 15. look into application state.
-16. Advanced JS games.
+16. Advanced JS games.    
 17. Other card games.
 18. Kubernetes.
 19. Ansible.
