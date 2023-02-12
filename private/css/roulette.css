@@ -1,0 +1,269 @@
+.roulette-container {
+  width:100%;
+  height:500px;  
+  display:flex;
+  position: relative;
+}
+.roulette-table { 
+  width:1300px;
+  height:400px;
+  margin-top:30px;
+  margin-left:50px; 
+  display:flex;  
+}
+#roulettewheel{  
+  width:300px;
+  height:300px;
+  margin-left:10px;
+  margin-top:100px;
+  
+  }
+
+#table {   
+  width:1000px;
+  height:380px;
+  margin-right:10px;
+  margin-top:15px;  
+  border-radius:10px;
+  border-style:groove;
+  border-color: rgb(218, 218, 228);
+  background-color: rgb(10, 99, 54);
+}
+
+#Player-Controls {  
+  width:800px;
+  height:70px;
+  position: absolute;
+  bottom: 0;
+  display: flex; 
+  left:450px;
+  
+}
+
+.toastr-top-margin{
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.number-button {
+  float:left;
+  width: 7%;
+  height: 75px;
+  font-size: 100%;  
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);
+}
+
+#red-number-button {  
+  background-color: rgb(104, 15, 15);
+}
+
+#red-number-button.selected {
+  background-color: rgba(214, 122, 122, 0.76);
+  border: dotted rgb(209, 202, 202);
+}
+
+#black-number-button {  
+  background-color: rgba(0, 0, 0, 0.767);
+}
+
+#black-number-button.selected {
+  background-color: rgba(124, 120, 120, 0.76);
+  border: dotted rgb(209, 202, 202);
+}
+
+#zero-number-button {
+  width: 9%;
+  height: 380px;
+  font-size: 100%;  
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);
+  background-color: rgba(113, 160, 107, 0.767);
+}
+#zero-number-button.selected {
+  background-color: rgba(195, 233, 169, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+#red{
+  width: 15.5%;
+  height: 75px;
+  font-size: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);
+  background-color:rgb(78, 3, 3);
+}
+#red.selected {
+  background-color: rgba(240, 153, 150, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+#black{
+  width: 15.5%;
+  height: 75px;
+  font-size: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);
+  background-color:rgb(27, 27, 27);
+}
+#black.selected {
+  background-color: rgba(59, 59, 58, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+#frst18,#scnd18,#even,#odd{
+  width: 15%;
+  height: 75px;
+  font-size: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);  
+}
+#frst18.selected ,#scnd18.selected ,#even.selected ,#odd.selected {
+  background-color: rgba(195, 233, 169, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+#second12Numbers,#third12Numbers,#first12Numbers{
+  width: 30.3%;
+  height: 75px;
+  font-size: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);  
+}
+#second12Numbers.selected,#third12Numbers.selected,#first12Numbers.selected {
+  background-color: rgba(195, 233, 169, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+#firstColumn,#secondColumn,#thirdColumn{
+  font-size: 100%;
+  background: transparent;
+  border: none;
+  color: white;
+  border:solid rgb(51, 51, 51);  
+}
+#firstColumn.selected ,#secondColumn.selected ,#thirdColumn.selected {
+  background-color: rgba(195, 233, 169, 0.76);
+  border: dotted rgb(241, 223, 223);
+}
+body {
+  background-color: rgb(51, 51, 51);
+}
+
+.bet-option {  
+  width: 40px;
+  height: 50px;
+  margin:2px;
+  border-radius: 50%; /* makes the button circular */
+  background-color: white;
+   /* centers the text inside the button */
+  font-size: 15px;
+  color: #242322;
+  font-weight: bold; 
+  line-height: 1px; /* centers the text vertically */
+  box-shadow: 1px 1px 2px rgb(37, 29, 80); /* adds a subtle shadow */
+  cursor: pointer;
+  border-style:double;
+  border: 10px double #367ee9be; /*blue border*/
+  position:relative;
+  text-indent: -7px;
+  
+}
+.bet-option:hover {
+  background-color: lightgray;
+}
+.bet-option.selected {
+  background-color: rgba(16, 133, 31, 0.76);
+  color: white;
+  border: 10px double #bec2c7be;
+}
+
+.double-button,.repeat-button,.clear-button {   
+  margin:10px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Open Sans', sans-serif;
+  border: 2px ridge #6180af;
+  background: linear-gradient(to bottom, #E6E6E6, #F5F5F5);
+  color: black;
+  font-size: 11px;
+  cursor: pointer;  
+}
+
+.double-button:hover,
+.repeat-button:hover.clear-button:hover {
+  background-color: lightgray;
+}
+
+.double-button.selected,
+.repeat-button.selected,.clear-button.selected {
+  background-color: goldenrod;
+  color: white;
+}
+
+#player-info {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin-left: 10px;
+}
+
+#number-list{
+  list-style-type: none;  
+  width: 700px;
+  margin-left:20%;
+  position: relative;
+  top: 40px;
+  display: flex;
+  flex-wrap: nowrap;  
+  flex-direction: row-reverse;  
+}
+
+#number-list li {
+  color: white;
+  font-size: 25px;
+  text-align: right;
+  width:35px;
+  text-align: center;
+  
+}
+#number-list li.last-item {
+  border: 3px white;
+  border-style:dotted; 
+}
+.red-prev-number{
+  background-color: rgb(104, 15, 15);
+}
+.black-prev-number{
+  background-color: rgba(17, 17, 17, 0.767);
+}
+.zero-prev-number{
+  background-color: rgba(11, 102, 23, 0.767);
+}
+
+
+
+.rightsidebar{
+  position:absolute;
+  right:0;
+  top:0;
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.514);
+  width:300px;
+  height:100%;
+  background-color: #00000085;
+  text-align: center;
+}
+#topPlayers{
+  font-size: 20px;
+  color: rgb(176, 206, 245);
+
+}

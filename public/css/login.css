@@ -1,0 +1,93 @@
+  body{
+    margin-left:10%;
+  }
+
+  /* Full-width inputs */
+input[type=text], input[type=password], input[type=email]  {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;    
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family:Helvetica, Arial, sans-serif;
+    border-radius: 6px;
+  }
+
+
+/* Add padding to containers */
+  .login-container {
+    border: 3px solid #f1f1f1;
+    padding: 16px;
+    width:300px;
+    margin-left:10px;
+    margin-top:10px;
+    
+  }
+
+  .register-container {
+    border: 1.5px solid #f1f1f1;
+    padding: 16px;
+    width:300px;
+    margin-left:10px;
+    margin-top:10px;
+    text-align: center;    
+  }
+
+.submit{
+    width:100%;
+    font-size: 20px;
+}
+
+#register{
+  width:50%;
+  font-size: 20px;
+  margin:0 auto;
+  display:block;
+  background-color:rgb(47, 51, 47);
+}
+
+/* The modal (background) */
+.modal {  
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* The modal content */
+.modal-content {
+  background-color: #333;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+/* The close button */
+.close {
+  margin-right:10px;
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add some padding to the modal body */
+.modal-body {
+  padding: 20px;
+}
